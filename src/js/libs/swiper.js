@@ -1,5 +1,40 @@
 import Swiper from 'swiper/bundle';
 
+var heading_thumb_slider = new Swiper(".heading__thumbnail-slider", {
+  // loop: true,
+  slidesPerView: 2,
+  spaceBetween: 20,
+  freeMode: true,
+  watchSlidesProgress: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+});
+
+var heading_slider = new Swiper(".heading__slider", {
+  // loop: true,
+  speed: 500,
+  slidesPerView: "auto",
+  spaceBetween: 500,
+
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
+  },
+
+  thumbs: {
+    swiper: heading_thumb_slider,
+  },
+});
+
 // var init = false;
 
 // function pageSlider() {

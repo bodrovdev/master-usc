@@ -3,9 +3,13 @@
 .heading {
   position: relative;
 
-  padding: 120px 0 0 0;
+  display: flex;
+  font-display: column;
 
-  z-index: -1;
+  height: 1px;
+  min-height: 739px;
+
+  padding: 120px 0 0 0;
 
   @include mixins.respond-to(desktopS) {
     min-height: 739px;
@@ -19,6 +23,8 @@
     width: 51%;
     height: 739px;
     background-color: var(--color-elm);
+
+    z-index: -1;
 
     &-wrapper {
       position: relative;
@@ -43,5 +49,108 @@
     }
   }
 
-  &__container {}
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 33px 0;
+
+    & .swiper-slide {
+      opacity: 0 !important;
+    }
+
+    & .swiper-slide-active {
+      opacity: 1 !important;
+    }
+
+    &-slide {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  &__slide {
+    &-title {
+      display: inline-block;
+
+      max-width: 545px;
+
+      font-family: var(--font-family-second);
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 50px;
+      color: var(--color-white);
+
+      padding: 109px 0 0 0;
+      margin: 0 20px 20px 0;
+    }
+
+    &-text {
+      max-width: 505px;
+
+      & p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 29px;
+        color: var(--color-silver-chalice);
+
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  &__underline {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  &__thumbnail-slider {
+    width: 330px !important;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  &__thumbnail-slide {
+    width: 155px !important;
+    height: 86px !important;
+  }
+
+  &__thumbnail-pagination {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: 122px !important;
+    height: 48px !important;
+
+    margin: 0 0 0 20px !important;
+
+    & .swiper-pagination-current {
+      font-family: var(--font-family-second);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--color-white);
+    }
+
+    & .swiper-pagination-total {
+      font-family: var(--font-family-second);
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 48px;
+      color: var(--color-white);
+    }
+  }
 }
