@@ -1,0 +1,46 @@
+@use "../mixins";
+
+.description {
+  background-color: var(--color-white);
+
+  padding: 93px 0 152px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  &__column {
+    &--left {
+      margin: 0 161px 0 0;
+    }
+
+    &--right {}
+
+    &-title {
+      display: inline-block;
+
+      max-width: 750px;
+
+      color: var(--color-silver-chalice);
+
+      margin: 0 0 40px 0;
+    }
+
+    &-text {
+      max-width: 610px;
+    }
+
+    &-image {
+      margin: 0 0 21px 0;
+    }
+
+    &-img {
+      width: 526px;
+      height: 272px;
+      object-fit: cover;
+    }
+  }
+}

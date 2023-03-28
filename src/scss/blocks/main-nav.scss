@@ -183,6 +183,10 @@
   &__nav-side {
     display: flex;
     align-items: center;
+
+    & .socials {
+      margin: 0 37px 0 0;
+    }
   }
 
   &__nav-lang {
@@ -224,23 +228,6 @@
       & span {
         color: var(--color-silver);
       }
-    }
-  }
-
-  &__nav-socials {
-    display: flex;
-
-    margin: 0 37px 0 0;
-  }
-
-  &__socials-item {
-    margin: 0 9px 0 0;
-
-    transition: transform 0.3s;
-
-    &:hover {
-      transform: translateY(-3px);
-      transition: transform 0.3s;
     }
   }
 

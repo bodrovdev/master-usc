@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 
-var heading_thumb_slider = new Swiper(".heading__thumbnail-slider", {
+var heading_thumb_slider = new Swiper('.heading__thumbnail-slider', {
   // loop: true,
   slidesPerView: 2,
   spaceBetween: 20,
@@ -13,7 +13,7 @@ var heading_thumb_slider = new Swiper(".heading__thumbnail-slider", {
   },
 });
 
-var heading_slider = new Swiper(".heading__slider", {
+var heading_slider = new Swiper('.heading__slider', {
   // loop: true,
   speed: 500,
   slidesPerView: "auto",
@@ -34,6 +34,19 @@ var heading_slider = new Swiper(".heading__slider", {
     swiper: heading_thumb_slider,
   },
 });
+
+var services_slider = new Swiper('.services__slider', {
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  centeredSlides: true,
+  loop: "true",
+  speed: 1000,
+
+  navigation: {
+    nextEl: '.slider-arrow--next',
+    prevEl: '.slider-arrow--prev',
+  },
+})
 
 // var init = false;
 

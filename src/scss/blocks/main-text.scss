@@ -1,0 +1,17 @@
+@use "../mixins";
+
+.main-text {
+  & p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: var(--color-mako);
+
+    padding: 0;
+    margin: 0 0 35px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
