@@ -550,25 +550,84 @@
 </main>
 
 <footer class="page-footer">
-
-  <section class="footer-main">
+  <div class="footer-main">
     <div class="footer-main__container base-container">
-      <a class="footer-main__logo-link base-link" href="index.html">
-        <svg class="footer-main__logo-icon" width="138" height="61" alt="#">
+
+      <a class="main-nav__logo-link base-link" href="index.html">
+        <svg class="main-nav__logo-icon" width="127" height="92" alt="Логотип">
           <use href="img/icon/sprite.svg#logo-icon"></use>
         </svg>
       </a>
-      <span class="footer-main__address"></span>
-      <span class="footer-main__copyright"></span>
-      <a class="footer-main__policy base-link" href="#">Политика конфиденциальности</a>
-      <a class="footer-main__isart base-link" targe="_blank" rel="noreferrer" href="https://is-art.ru/">
-        <span class="footer-main__isart-text">Разработано</span>
-        <svg class="footer-main__isart-icon" width="52" height="22" alt="#">
-          <use href="img/icon/sprite.svg#isart-logo-icon"></use>
-        </svg>
-      </a>
+
+      <ul class="main-nav__nav-list base-list">
+        <li class="main-nav__nav-item">
+          <a class="main-nav__nav-link base-link" href="#about">О нас</a>
+        </li>
+        <li class="main-nav__nav-item">
+          <a class="main-nav__nav-link base-link" href="#services">Услуги</a>
+        </li>
+        <li class="main-nav__nav-item">
+          <a class="main-nav__nav-link base-link" href="#projects">Проекты</a>
+        </li>
+        <li class="main-nav__nav-item">
+          <a class="main-nav__nav-link base-link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+
+      <div class="main-nav__nav-side">
+        <div class="main-nav__nav-lang">
+          <a class="main-nav__lang-item main-nav__lang-item--active base-link" href="#">en</a>
+          <a class="main-nav__lang-item base-link" href="#"><span>/</span>por</a>
+          <a class="main-nav__lang-item base-link" href="#"><span>/</span>rus</a>
+          <a class="main-nav__lang-item base-link" href="#"><span>/</span>uk</a>
+        </div>
+
+        <div class="socials">
+  <a class="socials__item base-link" href="#">
+    <svg class="socials__item-icon" width="27" height="27" aria-hidden="true">
+      <use href="img/icon/sprite.svg#facebook-icon"></use>
+    </svg>
+  </a>
+  <a class="socials__item base-link" href="#">
+    <svg class="socials__item-icon" width="27" height="27" aria-hidden="true">
+      <use href="img/icon/sprite.svg#whatsapp-icon"></use>
+    </svg>
+  </a>
+  <a class="socials__item base-link" href="#">
+    <svg class="socials__item-icon" width="27" height="27" aria-hidden="true">
+      <use href="img/icon/sprite.svg#tg-icon"></use>
+    </svg>
+  </a>
+  <a class="socials__item base-link" href="#">
+    <svg class="socials__item-icon" width="27" height="27" aria-hidden="true">
+      <use href="img/icon/sprite.svg#inst-icon"></use>
+    </svg>
+  </a>
+</div>
+
+        <a class="main-nav__nav-phone base-link" href="#">
+          <svg class="main-nav__phone-icon" width="16" height="16" aria-hidden="true">
+            <use href="img/icon/sprite.svg#phone-icon"></use>
+          </svg>
+          <span class="main-nav__phone-text">915 855 963</span>
+        </a>
+
+        <button class="main-nav__callback callback-button base-button" type="button" id="callback_modal_button">Заказать звонок</button>
+      </div>
+
     </div>
-  </section>
+  </div>
+
+  <div class="footer-underline">
+    <span class="footer-underline__copyright">© 2023 Master Usc</span>
+    <a class="footer-underline__policy base-link" href="#">Политика конфиденциальности</a>
+    <a class="footer-underline__credits base-link" href="">
+      <span class="footer-underline__credits-text">Разработано</span>
+      <svg class="footer-underline__credits-icon" width="52" height="22" aria-hidden="true">
+        <use href="img/icon/sprite.svg#isart-icon"></use>
+      </svg>
+    </a>
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
