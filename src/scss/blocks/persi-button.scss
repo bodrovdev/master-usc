@@ -28,5 +28,7 @@
   @include mixins.respond-to(notDesktop) {
     width: 110px;
     height: 110px;
+
+    font-size: 18px !important;
   }
 }
