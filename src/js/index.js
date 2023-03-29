@@ -64,7 +64,3 @@ modal_callback_form.addEventListener('submit', (e) => {
   document.querySelector('.modal-callback__inner').classList.add('modal-callback__inner--hidden');
   document.querySelector('.modal-callback__success').classList.add('modal-callback__success--active');
 })
-
-window.addEventListener('load', () => {
-  console.log(document.querySelector('.swiper-pagination-current').nextSibling);
-})

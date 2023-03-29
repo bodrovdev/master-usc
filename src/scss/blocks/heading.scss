@@ -4,12 +4,13 @@
   position: relative;
 
   display: flex;
-  font-display: column;
+  flex-direction: column;
 
-  height: 1px;
   min-height: 739px;
 
   padding: 120px 0 0 0;
+
+  z-index: 1;
 
   @include mixins.respond-to(desktopS) {
     min-height: 739px;
@@ -24,12 +25,18 @@
     height: 739px;
     background-color: var(--color-elm);
 
-    z-index: -1;
+    z-index: 1;
+
+    @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
 
     &-wrapper {
       position: relative;
       width: 100%;
       height: 100%;
+
+      z-index: 1;
 
       &::before {
         content: "";
@@ -44,8 +51,19 @@
 
         transform: translateY(-50%);
 
-        z-index: -1;
+        z-index: 0;
       }
+    }
+
+    &--left {
+      position: absolute;
+      top: 142px;
+      left: 250px;
+
+      width: 243px;
+      height: 438px;
+      background-color: transparent;
+      border: 17px solid #2C2C2C;
     }
   }
 
@@ -54,13 +72,22 @@
     flex-direction: column;
 
     height: 100%;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+    }
   }
 
   &__slider {
     width: 100%;
     max-width: 100%;
+    background-color: transparent;
 
     margin: 0 0 33px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      padding: 0 5% 0 5%;
+    }
 
     & .swiper-slide {
       opacity: 0 !important;
@@ -70,9 +97,22 @@
       opacity: 1 !important;
     }
 
+    & .swiper-slide-shadow {
+      background-color: transparent !important;
+    }
+
     &-slide {
       display: flex;
       align-items: stretch;
+
+      background-color: transparent;
+
+      @include mixins.respond-to(notDesktop) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        height: auto;
+      }
     }
   }
 
@@ -86,10 +126,20 @@
 
       padding: 109px 0 0 0;
       margin: 0 20px 20px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        padding: 54px 0 0 0;
+        margin: 0 0 20px 0;
+      }
     }
 
     &-text {
       max-width: 505px;
+      background-color: transparent;
+
+      @include mixins.respond-to(notDesktop) {
+        margin: 0 0 20px 0;
+      }
 
       & p {
         font-weight: 500;
@@ -101,12 +151,47 @@
         margin: 0;
       }
     }
+
+    &-image {
+      @include mixins.respond-to(notDesktop) {
+        width: 100%;
+
+        margin: auto 0 0 0;
+      }
+    }
+
+    &-img {
+      @include mixins.respond-to(notDesktop) {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+
   }
 
   &__underline {
+    position: relative;
+
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+
+    @include mixins.respond-to(notDesktop) {
+      padding: 0 5%;
+    }
+
+    & .persi-button {
+      position: absolute;
+      bottom: 43px;
+      right: 5%;
+
+      z-index: 3;
+
+      @include mixins.respond-to(notDesktop) {
+        bottom: 100px;
+      }
+    }
   }
 
   &__thumbnail-slider {
@@ -114,6 +199,10 @@
 
     padding: 0;
     margin: 0;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 100% !important;
+    }
   }
 
   &__thumbnail-slide {
@@ -131,7 +220,11 @@
     width: 122px !important;
     height: 48px !important;
 
-    margin: 0 0 0 20px !important;
+    margin: 0 0 10px 20px !important;
+
+    @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
 
     & .swiper-pagination-current {
       font-family: var(--font-family-second);

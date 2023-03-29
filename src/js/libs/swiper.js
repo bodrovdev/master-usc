@@ -13,6 +13,27 @@ var heading_thumb_slider = new Swiper('.heading__thumbnail-slider', {
   },
 });
 
+window.addEventListener('load', () => {
+  let current_slide = document.querySelector('.swiper-pagination-current');
+  let total_slide = document.querySelector('.swiper-pagination-total');
+
+  current_slide.textContent = `0${current_slide.textContent}`;
+  total_slide.textContent = `0${total_slide.textContent}`;
+
+  heading_thumb_slider.on('slideChange', () => {
+    current_slide.textContent = `0${current_slide.textContent}`;
+    total_slide.textContent = `0${total_slide.textContent}`;
+  })
+
+  let divider = document.querySelector('.heading__thumbnail-pagination').childNodes[1];
+  let divider_span = document.createElement('span');
+  divider.after(divider_span);
+  divider_span.appendChild(divider);
+
+  divider_span.textContent = '   __   ';
+  divider_span.classList.add('divider');
+})
+
 var heading_slider = new Swiper('.heading__slider', {
   // loop: true,
   speed: 500,

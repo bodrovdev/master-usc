@@ -3,14 +3,22 @@
 .socials {
   display: flex;
 
+  @include mixins.respond-to(notDesktop) {
+    margin: 0 0 20px 0 !important;
+  }
+
   &__item {
+    transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
     margin: 0 9px 0 0;
 
-    transition: transform 0.3s;
-
     &:hover {
-      transform: translateY(-3px);
-      transition: transform 0.3s;
+      transform: translateY(-5px);
+      transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 20px 0 0;
     }
   }
 }

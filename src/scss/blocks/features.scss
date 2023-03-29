@@ -59,12 +59,25 @@
         background-color: var(--color-elm);
         border-radius: 50%;
       }
+
+      @include mixins.respond-to(notDesktop) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 
   &__item {
     &-info {
       margin: 0 10px 0 0;
+
+      @include mixins.respond-to(notDesktop) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 0 0 5px 0;
+      }
     }
 
     &-title {
@@ -74,6 +87,12 @@
       color: var(--color-mine-shaft);
 
       margin: 0 0 16px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        order: 2;
+
+        margin: 0;
+      }
     }
 
     &-num {
@@ -91,6 +110,12 @@
       font-size: 20px;
       line-height: 24px;
       color: var(--color-white);
+
+      @include mixins.respond-to(notDesktop) {
+        order: 1;
+
+        margin: 0 0 18px 0;
+      }
     }
 
     &-content {
@@ -98,12 +123,28 @@
       align-items: stretch;
 
       margin: 0 0 0 auto;
+
+      @include mixins.respond-to(notDesktop) {
+        margin: 0;
+      }
     }
 
     &-text {
       max-width: 485px;
 
       margin: 0 24px 0 0;
+
+      @include mixins.respond-to(notDesktop) {
+        text-align: center;
+
+        margin: 0;
+      }
+    }
+
+    &-image {
+      @include mixins.respond-to(notDesktop) {
+        display: none;
+      }
     }
 
     &-img {

@@ -3,10 +3,37 @@
 .footer-main {
   position: relative;
 
-  padding: 60px 0 14px 0;
+  margin: 0 0 22px 0;
 
   &__container {
+    position: relative;
+
     display: flex;
     align-items: center;
+
+    padding: 60px 0 14px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      padding: 30px 0 14px 0;
+
+      & .main-nav__logo-link {
+        margin: 0 0 20px 0;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-white);
+      opacity: 0.4;
+    }
   }
 }
