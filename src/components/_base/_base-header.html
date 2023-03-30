@@ -85,11 +85,15 @@
         </svg>
       </button>
       <div class="modal-callback__inner">
-
-        <form class="modal-callback__form" id="modal_callback_form">
-          <button class="modal-callback__submit base-button" type="submit">Связаться с нами</button>
+        <span class="modal-callback__inner-title base-title">Заказать звонок</span>
+        <p class="modal-callback__inner-subtitle base-par">
+          Отправьте заявку и наш менеджер с вами свяжется в ближайшее время
+        </p>
+        <form class="modal-callback__inner-form" id="modal_callback_form">
+          <input class="modal-callback__form-input" type="text" name="name">
+          <input class="modal-callback__form-input" type="phone" name="phone">
+          <button class="modal-callback__form-submit base-button" type="submit">Отправить</button>
         </form>
-
       </div>
       <div class="modal-callback__success">
         <span class="modal-callback__success-text">Спасибо, ваша заявка отправлена</span>

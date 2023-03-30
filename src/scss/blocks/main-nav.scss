@@ -132,7 +132,13 @@
     display: flex;
     align-items: center;
 
-    margin: 0 116px 0 0;
+    @include mixins.respond-to(desktopD) {
+      margin: 0 40px 0 0;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      margin: 0 116px 0 0;
+    }
 
     @include mixins.respond-to(notDesktop) {
       position: relative;
@@ -203,7 +209,13 @@
     }
 
     & .socials {
-      margin: 0 37px 0 0;
+      @include mixins.respond-to(desktopD) {
+        margin: 0 15px 0 0;
+      }
+
+      @include mixins.respond-to(desktopM) {
+        margin: 0 37px 0 0;
+      }
     }
   }
 
@@ -304,6 +316,7 @@
       font-size: 19px;
       line-height: 30px;
       color: var(--color-white);
+      white-space: nowrap;
     }
   }
 

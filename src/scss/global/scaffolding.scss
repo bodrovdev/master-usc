@@ -19,7 +19,6 @@ body {
 
 	width: 100%;
 	min-height: 100vh;
-	background-color: var(--color-mine-shaft);
 
 	font-family: var(--font-family-default);
 	color: var(--color-mine-shaft);
@@ -61,4 +60,32 @@ input[type=number] {
 .divider {
 	font-size: 20px;
 	color: var(--color-elm);
+}
+
+.slider-arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	width: 90px;
+	height: 90px;
+	background-color: var(--color-white);
+	border-radius: 50%;
+	pointer-events: all;
+	cursor: pointer;
+
+	transition: background-color 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+	z-index: 20;
+
+	&:hover {
+		background-color: var(--color-persimmon);
+		transition: background-color 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+	}
+
+	@include mixins.respond-to(notDesktop) {
+		width: 45px;
+		height: 45px;
+	}
 }

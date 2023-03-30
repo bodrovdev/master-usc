@@ -13,15 +13,31 @@
 
     padding: 60px 0 14px 0;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
       align-items: flex-start;
 
       padding: 30px 0 14px 0;
 
       & .main-nav__logo-link {
-        margin: 0 0 20px 0;
+        margin: 0 0 40px 0;
       }
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+
+      padding: 30px 0;
+    }
+
+    @include mixins.respond-to(desktopSOnly) {
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+
+      padding: 30px 0;
     }
 
     &::after {
@@ -34,6 +50,73 @@
       height: 1px;
       background-color: var(--color-white);
       opacity: 0.4;
+    }
+  }
+
+  & .main-nav__nav-list {
+
+    @include mixins.respond-to(notDesktop) {
+      top: auto;
+
+      transform: none;
+
+      margin: 0 0 40px 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: auto;
+
+      margin: 0;
+    }
+
+    @include mixins.respond-to(desktopSOnly) {
+      width: auto;
+
+      margin: 0;
+    }
+  }
+
+  & .main-nav__nav-side {
+    @include mixins.respond-to(tabletOnly) {
+      justify-content: space-between;
+
+      margin: 0;
+    }
+
+    @include mixins.respond-to(desktopSOnly) {
+      justify-content: space-between;
+
+      margin: 0;
+    }
+  }
+
+  & .main-nav__nav-lang {
+    @include mixins.respond-to(notDesktop) {
+      position: relative;
+      top: auto;
+      left: auto;
+
+      margin: 0 0 40px 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0 0 15px 0;
+    }
+
+    @include mixins.respond-to(desktopSOnly) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  & .socials {
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 40px 0 !important;
+    }
+  }
+
+  & .main-nav__nav-phone {
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 40px 0 !important;
     }
   }
 }

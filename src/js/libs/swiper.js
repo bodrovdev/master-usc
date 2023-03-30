@@ -1,7 +1,6 @@
 import Swiper from 'swiper/bundle';
 
 var heading_thumb_slider = new Swiper('.heading__thumbnail-slider', {
-  // loop: true,
   slidesPerView: 2,
   spaceBetween: 20,
   freeMode: true,
@@ -35,10 +34,23 @@ window.addEventListener('load', () => {
 })
 
 var heading_slider = new Swiper('.heading__slider', {
-  // loop: true,
   speed: 500,
   slidesPerView: "auto",
   spaceBetween: 500,
+
+  navigation: {
+    nextEl: '.heading__slider-arrow--next',
+    prevEl: '.heading__slider-arrow--prev',
+  },
+
+  breakpoints: {
+    320: {
+      loop: true,
+    },
+    1280: {
+      loop: false,
+    }
+  },
 
   effect: "creative",
   creativeEffect: {
@@ -54,19 +66,32 @@ var heading_slider = new Swiper('.heading__slider', {
   thumbs: {
     swiper: heading_thumb_slider,
   },
+
+
 });
 
+
+
 var services_slider = new Swiper('.services__slider', {
-  slidesPerView: "auto",
-  spaceBetween: 0,
-  centeredSlides: true,
-  loop: "true",
+  loop: true,
+  initialSlide: 2,
   speed: 1000,
 
   navigation: {
-    nextEl: '.slider-arrow--next',
-    prevEl: '.slider-arrow--prev',
+    nextEl: '.services__slider-arrow--next',
+    prevEl: '.services__slider-arrow--prev',
   },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 24,
+    },
+    1280: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    }
+  }
 })
 
 // var init = false;

@@ -3,6 +3,12 @@
 .callback-block {
   background-color: var(--color-white);
 
+  // padding: 0 0 100px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    // padding: 0 0 50px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -57,12 +63,18 @@
       padding: 45px 40px;
 
       @include mixins.respond-to(notDesktop) {
-        padding: 10px 5% 10px 5%;
+        order: 2;
+
+        padding: 5%;
       }
     }
 
     &--right {
       background-color: #F4F4F4;
+
+      @include mixins.respond-to(notDesktop) {
+        order: 1;
+      }
     }
 
     &-caption {
