@@ -82,7 +82,9 @@
     margin: 0 0 33px 0;
 
     @include mixins.respond-to(notDesktop) {
-      padding: 0 5% 0 5%;
+      padding: 0 5% 50px 5%;
+
+      margin: 0;
     }
 
     & .swiper-slide {
@@ -113,7 +115,7 @@
 
     &-arrows {
       position: absolute;
-      bottom: 122px;
+      bottom: 180px;
       left: 50%;
 
       display: none;
@@ -149,7 +151,7 @@
       margin: 0 20px 20px 0;
 
       @include mixins.respond-to(notDesktop) {
-        padding: 54px 0 0 0;
+        padding: 50px 0 0 0;
         margin: 0 0 20px 0;
       }
     }

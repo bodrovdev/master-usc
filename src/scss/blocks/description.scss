@@ -6,7 +6,7 @@
   padding: 93px 0 152px 0;
 
   @include mixins.respond-to(notDesktop) {
-    padding: 41px 0 76px 0;
+    padding: 50px 0;
   }
 
   &__container {

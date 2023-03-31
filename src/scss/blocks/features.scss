@@ -5,6 +5,10 @@
 
   padding: 100px 0;
 
+  @include mixins.respond-to(notDesktop) {
+    padding: 50px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -14,6 +18,10 @@
     color: var(--color-silver-chalice);
 
     margin: 0 0 41px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &__wrapper {
@@ -33,9 +41,13 @@
       padding: 35px 0 0 0;
       margin: 0 0 41px 0;
 
-      &:last-child {
-        margin: 0;
+      @include mixins.respond-to(notDesktop) {
+        margin: 35px 0 0 0;
       }
+
+      // &:last-child {
+      //   margin: 0;
+      // }
 
       &::before {
         content: "";
@@ -114,7 +126,7 @@
       @include mixins.respond-to(notDesktop) {
         order: 1;
 
-        margin: 0 0 18px 0;
+        margin: 0 0 10px 0;
       }
     }
 

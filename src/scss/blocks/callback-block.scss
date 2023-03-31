@@ -34,6 +34,8 @@
 
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
+
+      gap: 0;
     }
 
     & .persi-button {
@@ -42,8 +44,8 @@
       right: 28px;
 
       @include mixins.respond-to(notDesktop) {
-        bottom: -50px;
-        right: 0;
+        bottom: 15px;
+        right: 15px;
       }
     }
   }
@@ -65,7 +67,7 @@
       @include mixins.respond-to(notDesktop) {
         order: 2;
 
-        padding: 5%;
+        padding: 50px 5%;
       }
     }
 
@@ -86,8 +88,8 @@
       margin: 0 0 68px 0;
 
       @include mixins.respond-to(notDesktop) {
-        padding: 0 0 34px 0;
-        margin: 0 0 34px 0;
+        padding: 0 0 25px 0;
+        margin: 0 0 25px 0;
       }
 
       &::after {
@@ -123,7 +125,7 @@
       padding: 52px 47px 0 40px;
 
       @include mixins.respond-to(notDesktop) {
-        padding: 26px 23px 26px 20px;
+        padding: 15px 23px 26px 20px;
       }
     }
 

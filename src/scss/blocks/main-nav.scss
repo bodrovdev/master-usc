@@ -94,6 +94,7 @@
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @include mixins.respond-to(notDesktop) {
       justify-content: space-between;
@@ -124,6 +125,7 @@
   &__nav-menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     width: 100%;
   }

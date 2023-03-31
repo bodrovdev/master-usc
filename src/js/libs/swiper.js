@@ -72,6 +72,7 @@ var heading_slider = new Swiper('.heading__slider', {
 
 var services_slider = new Swiper('.services__slider', {
   loop: true,
+  spaceBetween: 24,
   initialSlide: 2,
   speed: 1000,
 
@@ -83,7 +84,7 @@ var services_slider = new Swiper('.services__slider', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 24,
+
     },
     1280: {
       slidesPerView: 2,
