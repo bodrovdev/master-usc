@@ -90,8 +90,12 @@
           Отправьте заявку и наш менеджер с вами свяжется в ближайшее время
         </p>
         <form class="modal-callback__inner-form" id="modal_callback_form">
-          <input class="modal-callback__form-input" type="text" name="name">
-          <input class="modal-callback__form-input" type="phone" name="phone">
+          <input class="modal-callback__form-input" type="text" name="name" placeholder="Имя" required>
+          <input class="modal-callback__form-input" type="phone" name="phone" placeholder="Телефон" required>
+          <input class="modal-callback__form-input modal-callback__form-input--check visually-hidden" type="checkbox" id="check" checked required>
+          <label class="modal-callback__form-label" for="check">
+            Я согласен(на) с <a href="#">обработкой персональных данных</a>
+          </label>
           <button class="modal-callback__form-submit base-button" type="submit">Отправить</button>
         </form>
       </div>
