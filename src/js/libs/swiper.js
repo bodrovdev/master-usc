@@ -70,8 +70,6 @@ var heading_slider = new Swiper('.heading__slider', {
 
 });
 
-
-
 var services_slider = new Swiper('.services__slider', {
   loop: true,
   initialSlide: 2,
