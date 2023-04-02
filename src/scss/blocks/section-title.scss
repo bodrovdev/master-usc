@@ -1,14 +1,41 @@
 @use "../mixins";
 
 .section-title {
-  font-family: var(--font-family-second);
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  color: var(--color-silver-chalice);
 
-  @include mixins.respond-to(notDesktop) {
-    font-size: 35px;
-    line-height: 35px;
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-family: var(--font-family-second);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    color: var(--color-silver-chalice);
+
+    padding: 0;
+    margin: 0;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+
+  & span {
+    font-family: var(--font-family-second);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+
+    padding: 0;
+    margin: 0;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 35px;
+      line-height: 35px;
+    }
   }
 }

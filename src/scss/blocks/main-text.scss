@@ -1,6 +1,11 @@
 @use "../mixins";
 
 .main-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  color: var(--color-mako);
+
   & p {
     font-weight: 400;
     font-size: 18px;
