@@ -137,8 +137,11 @@
 <main class="page-content">
   <section class="heading">
 
-    <div class="heading__graphic">
-      <div class="heading__graphic-wrapper"></div>
+    <div class="heading__graphic" id="tsparticles">
+      <div class="heading__graphic-wrapper">
+        <canvas class="heading__graphic-canvas" id="particles"></canvas>
+        <div class="heading__canvas-layout"></div>
+      </div>
     </div>
 
     <div class="heading__graphic heading__graphic--left"></div>
@@ -167,7 +170,9 @@
           </div>
           <div class="heading__slider-slide swiper-slide">
             <div class="heading__slide-column">
-              <h2 class="heading__slide-title section-title base-title">Лучший сервис услуг в <span class="color-elm">Португалии!</span></h2>
+              <div class="heading__slide-title section-title">
+                <h2>Лучший сервис услуг в <span class="color-elm">Португалии!</span></h2>
+              </div>
               <div class="heading__slide-text">
                 <p>
                   Компания USC Master предоставляет широкий
@@ -186,7 +191,9 @@
           </div>
           <div class="heading__slider-slide swiper-slide">
             <div class="heading__slide-column">
-              <h2 class="heading__slide-title section-title base-title">Лучший сервис услуг в <span class="color-elm">Португалии!</span></h2>
+              <div class="heading__slide-title section-title">
+                <h2>Лучший сервис услуг в <span class="color-elm">Португалии!</span></h2>
+              </div>
               <div class="heading__slide-text">
                 <p>
                   Мы гарантируем
@@ -281,6 +288,10 @@
   </section>
 
   <section class="services">
+
+    <canvas class="services__graphic-canvas" id="particles2"></canvas>
+    <div class="services__canvas-layout"></div>
+
     <div class="services__container base-container" id="projects">
       <div class="services__title section-title">
         <h2>«USC Master» - компания с качественной продукцией на рынке</h2>
@@ -548,6 +559,10 @@
         padding: 58px 0 0 0;
       }
 
+      .ymaps-2-1-79-map {
+        height: 459px !important;
+      }
+
       @media (min-width: 320px) and (max-width: 1279px) {
         .map {
           /* height: 100% !important; */
@@ -659,8 +674,8 @@
   </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="js/index.min.js?v=1.6"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </body>
 
 </html>
