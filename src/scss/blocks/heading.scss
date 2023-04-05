@@ -23,7 +23,8 @@
 
     width: 51%;
     height: 739px;
-    background-color: var(--color-elm);
+    background: var(--color-elm);
+    background-repeat: repeat;
 
     @include mixins.respond-to(notDesktop) {
       display: none;
@@ -31,8 +32,10 @@
 
     &-wrapper {
       position: relative;
+
       width: 100%;
       height: 100%;
+      // overflow: hidden;
 
       &::before {
         content: "";
@@ -51,6 +54,18 @@
       }
     }
 
+    &-canvas {
+      position: absolute;
+
+      display: block;
+
+      height: 100% !important;
+
+      @include mixins.respond-to(notDesktop) {
+        display: none;
+      }
+    }
+
     &--left {
       position: absolute;
       top: 142px;
@@ -63,11 +78,24 @@
     }
   }
 
+  &__canvas-layout {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    background-color: #1d707a;
+    opacity: 80%;
+
+    z-index: 2;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
 
     height: 100%;
+
+    z-index: 3;
 
     @include mixins.respond-to(notDesktop) {
       width: 100%;
@@ -202,6 +230,7 @@
 
   &__underline {
     position: relative;
+    bottom: 30px;
 
     display: flex;
     align-items: flex-end;
@@ -215,8 +244,8 @@
 
     & .persi-button {
       position: absolute;
-      bottom: 43px;
-      right: 5%;
+      bottom: 13px;
+      right: -7px;
 
       z-index: 3;
 

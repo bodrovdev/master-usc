@@ -31,7 +31,7 @@
     flex-direction: column;
     align-items: center;
 
-    width: 509px;
+    width: 515px;
     height: 497px;
     background-color: var(--color-white);
     border-radius: 6px;
@@ -156,11 +156,11 @@
 
       &--check:checked~.modal-callback__form-label::before {
         background: url(../img/image/modal-callback-check.svg) var(--color-elm);
-        background-size: 18px 18px;
-        // background-position: center;
+        background-size: 15px 10px;
+        background-position: center;
         background-repeat: no-repeat;
 
-        transition: background 0.1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        transition: background 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
       }
     }
 
@@ -171,11 +171,12 @@
       cursor: pointer;
 
       font-weight: 400;
-      font-size: 14px;
-      line-height: 14px;
+      font-size: 16px;
+      line-height: 16px;
       letter-spacing: -0.05em;
+      white-space: nowrap;
 
-      padding: 0 0 0 25px;
+      padding: 0 0 0 28px;
       margin: 0 0 36px 0;
 
       &::before {
@@ -184,13 +185,15 @@
         top: 40%;
         left: 0;
 
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
         background: var(--color-elm);
+        background-position: center;
+        background-repeat: no-repeat;
         border-radius: 5px;
 
         transform: translateY(-50%);
-        transition: background 0.1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        transition: background 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
       }
 
       & a {
@@ -216,7 +219,6 @@
       height: 47px;
 
       background-color: var(--color-vivid-tangerine);
-      border: 1px solid var(--color-mine-shaft);
       border-radius: 5px;
       cursor: pointer;
 
