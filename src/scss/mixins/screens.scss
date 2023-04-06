@@ -13,6 +13,7 @@ $screens: (
 		max: 1279px),
 	notDesktop: (min: 0, max: 1279px),
 	desktopD: (min: 1280px),
+	desktopDOnly: (min: 1280px, max: 1365px),
 	desktopM: (min: 1366px,
 	),
 	desktopL: (min: 1600px),

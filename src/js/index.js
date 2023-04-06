@@ -64,3 +64,17 @@ modal_callback_form.addEventListener('submit', (e) => {
   document.querySelector('.modal-callback__inner').classList.add('modal-callback__inner--hidden');
   document.querySelector('.modal-callback__success').classList.add('modal-callback__success--active');
 })
+
+// --- Фикс ширины правой части навигации навигации
+window.addEventListener('load', () => {
+  if (window.innerWidth < 1280) {
+    return;
+  }
+  else {
+    let left_column_width = document.querySelector('.heading__graphic').offsetWidth;
+    let left_column_nav = document.querySelector('.main-nav__nav-side');
+    let small_fix_num = (window.innerWidth - document.querySelector('.main-nav__container').offsetWidth) / 2;
+
+    left_column_nav.setAttribute(`style`, `max-width:${left_column_width - small_fix_num - 12}px`);
+  }
+})

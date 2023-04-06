@@ -139,6 +139,11 @@
 
         height: auto;
       }
+
+      @include mixins.respond-to(desktopDOnly) {
+        display: flex;
+        justify-content: space-between;
+      }
     }
 
     &-arrows {
@@ -168,6 +173,15 @@
   }
 
   &__slide {
+
+    &-column {
+      @include mixins.respond-to(desktopDOnly) {
+        width: 450px;
+        min-width: 450px;
+        margin: 0 40px 0 0;
+      }
+    }
+
     &-title {
       display: inline-block;
 
